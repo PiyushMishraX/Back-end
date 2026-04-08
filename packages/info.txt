@@ -1,0 +1,13 @@
+
+packages are premade code which othes maintain and we can use
+( do not commit node_modules)
+
+package installl - 
+npm i cat-me 
+
+then write
+
+server.js or index.js  or any .js extension file
+
+running js file with node
+node index.js
