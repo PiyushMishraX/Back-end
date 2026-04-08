@@ -9,5 +9,11 @@ then write
 
 server.js or index.js  or any .js extension file
 
-running js file with node
+see documentation to find how to use code
+
+running js file with node -
 node index.js
+
+package.json have dependencies
+
+and package locak .json have dependencies required by our dependencies  ( SLEF maintaining)
