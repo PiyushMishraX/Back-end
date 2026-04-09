@@ -23,6 +23,7 @@ app.get("/", (req,res)=>{
 
 app.get("/about", (req,res)=>{ 
     res.send("About Page") // check at site/about // open after restarting server
+    // res.send(typeof(res)) // object
 })
 
 app.listen(3000)  // it is for startind the server

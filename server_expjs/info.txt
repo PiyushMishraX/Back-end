@@ -25,3 +25,9 @@ such as mail - 25 port s default
 and files port 20,21 etc 
 this helps internet to communicate with server easily
 
+
+req and res-
+request - any data that can come from frontend can be accessed by req/request ( in express)
+
+ressponse - logic can be anything, but to send the response back, have to use res object (s send back to frontend , through .send method and some others )
+
