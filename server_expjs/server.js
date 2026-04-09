@@ -11,9 +11,9 @@
 // for now it gives error becuase we haven't program  it for use to use
 
 
-const express = require('express');
+const express = require('express'); // imports the Express module
 
-const app = express()
+const app = express() // call express , the instace of server is created // genrally stored as app name // this line is server insatce creation
 
 app.get("/", (req,res)=>{
     res.send("Hello World")
@@ -25,4 +25,7 @@ app.get("/about", (req,res)=>{
     res.send("About Page") // check at site/about // open after restarting server
 })
 
-app.listen(3000) 
+app.listen(3000)  // it is for startind the server
+
+// till this  learned how to create a server and program it for user , what response he can see
+
