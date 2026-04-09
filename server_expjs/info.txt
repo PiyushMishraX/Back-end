@@ -5,4 +5,4 @@ we create it step by step
 npm init -y // create package.json /// no initialization
 
 express // is package to create server faster and better
-npm i express
+npm i express  // installs node moule and create packafe-lock file
