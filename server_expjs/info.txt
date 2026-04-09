@@ -3,3 +3,6 @@ server is a node js application
 we create it step by step 
 
 npm init -y // create package.json /// no initialization
+
+express // is package to create server faster and better
+npm i express
