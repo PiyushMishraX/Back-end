@@ -16,3 +16,12 @@ npm init -y ---> nodejs application intiate
 npm i express ---> install express package
 
 server.js ---> create it 
+
+
+what is port -
+
+each application have some separate port in the computer from which internet comunicates to
+such as mail - 25 port s default
+and files port 20,21 etc 
+this helps internet to communicate with server easily
+
