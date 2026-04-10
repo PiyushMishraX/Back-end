@@ -17,3 +17,10 @@ express also follows http protocol by deafult so rest api isn't a problem
 
 
 npx nodemon server.js ,starts the server and restarts server automatically for every change in js file , it restarts for even a slight change , use it instead of node server.js
+
+
+
+problem when server stops --> program stops( processor stops processing ) --> ram clears --> value/s stored in ram clears to , new value of notes get new sotrage space so same value won't be in value so it is cleared
+--> 
+
+we use database to store data so it won't get deleted

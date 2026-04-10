@@ -75,8 +75,10 @@ app.patch("/notes/:index",(req,res)=>{
 
     const index = req.params.index
     const description = req.body.description
+    const title = req.body.title // program server for updating title else it won't
 
     notes[ index ].description = description
+    notes[ index ].title = title
 
     res.status(200).json({
         message: "note updated successfully"
