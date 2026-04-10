@@ -1,0 +1,11 @@
+api - set of rules or protocol that allows communication b/w two or more applications
+( such as backend server and frontend - sepearated in professinal developement )
+
+REST api is a type of APi 
+
+https methods
+use-
+GET --> server se data fetch karvana ho // send data to frontend 
+POST --> server pr data send karna ho // frontend se server data bhejna hai 
+PATCH --> server pr  data already hai aur us data ko update karna hai
+DELETE --> server par data hai aur use delete karna hai
