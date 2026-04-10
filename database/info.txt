@@ -1,0 +1,10 @@
+database --> mongoDB --> create cluster --> create database 
+
+mongoDB.com
+
+database is also a server
+web server (our application server using express), file servers, database servers, and mail servers
+
+security -> two layrs
+ network access layer
+ Database access layer
