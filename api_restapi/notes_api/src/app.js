@@ -5,21 +5,17 @@ const express = require("express")
 
 const app = express()
 
-/*
+const notes = []
 
-note = {
-    title: " first note",
-    description : "this is my first note"
-}
+// user -> frontend -> title and description -> create api 
 
-const notes= [
-    {
-        title: " first note",
-        description : "this is my first note"
-    }
-]
+// app.post('/notes')  // create /notes api mehtod psot
+//  POST /notes
+app.post('/notes', (req, res)=>{ // req mai data aayega 
 
-*/
+    console.log(req.body); // data qill come in req.body
+    
 
+}) 
 
 module.exports = app // export server after creation // expoting instance of server
