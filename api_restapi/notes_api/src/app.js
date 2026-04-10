@@ -46,4 +46,24 @@ app.get('/notes', (req,res)=>{
     })
 })
 
+//  delete /notes:index -> delete element at index 0 to n-1 for n notes
+//  delete /notes:1 
+// delete /notes: -> static
+// index -> dynamic written after :
+
+
+app.delete('/notes/index',(req,res)=>{
+
+    const index = req.params.index  // the value of index is stored at the index variable
+
+    // delete /notes:1 -> req to delete index at 1
+    //  delete /notes:67 -> req to delete index at 67\
+
+    delete notes[ index ]
+
+    res.status(200).json({
+        message: "note deleted successfully"
+    })
+})
+
 module.exports = app // export server after creation // expoting instance of server
