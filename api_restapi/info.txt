@@ -14,3 +14,6 @@ DELETE --> server par data hai aur use delete karna hai
 creating and application ( just a small task cannot be said application ) using this methods
 
 express also follows http protocol by deafult so rest api isn't a problem 
+
+
+npx nodemon server.js ,starts the server and restarts server automatically for every change in js file , it restarts for even a slight change , use it instead of node server.js
