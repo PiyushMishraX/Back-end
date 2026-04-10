@@ -11,19 +11,39 @@ const notes = []
 // user -> frontend -> title and description -> create api 
 
 // app.post('/notes')  // create /notes api mehtod psot
+
+
 //  POST /notes
-app.post('/notes', (req, res)=>{ // req mai data aayega 
+// app.post('/notes', (req, res)=>{ // req mai data aayega 
 
-    // console.log(req.body); // data qill come in req.body
-    // we have to sent data from frontend , but to sent data from browser qw need to create a ui , instead for testing we use POSTMAN
-    // output is undefined so we have to use middleware ( future topic)
+//     // console.log(req.body); // data qill come in req.body
+//     // we have to sent data from frontend , but to sent data from browser qw need to create a ui , instead for testing we use POSTMAN
+//     // output is undefined so we have to use middleware ( future topic)
 
+//     notes.push(req.body);
+
+//     // 201 succes creating new resource 
+//     res.status(201).json({
+//         message: "note created successfully" // see in postman response
+//     })
+// }) 
+
+app.post('/notes', (req, res)=>{ 
     notes.push(req.body);
 
-    // 201 succes creating new resourc 
     res.status(201).json({
-        message: "note created successfully" // see in postman response
+        message: "note created successfully"
     })
 }) 
+
+// api for sending all notes to frontend from server using GET method to fetch data from server
+// api GET /notes --> same name different method
+app.get('/notes', (req,res)=>{
+
+    res.status(200).json({
+        message: "notefetched suucessfully",
+        notes: notes
+    })
+})
 
 module.exports = app // export server after creation // expoting instance of server
