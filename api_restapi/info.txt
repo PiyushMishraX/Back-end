@@ -12,3 +12,5 @@ DELETE --> server par data hai aur use delete karna hai
 
 
 creating and application ( just a small task cannot be said application ) using this methods
+
+express also follows http protocol by deafult so rest api isn't a problem 
