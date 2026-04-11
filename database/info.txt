@@ -29,3 +29,6 @@ Download compass to see the data of clusters
 
 package to connect server with databse 
 npm i mongoose
+
+
+models -> for creating schema
