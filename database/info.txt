@@ -8,3 +8,21 @@ web server (our application server using express), file servers, database server
 security -> two layrs
  network access layer
  Database access layer
+
+
+ security allowing only oour server to connect with database using IP address allowing 
+
+ ip address changes ( differnt hostsopts ) // allow access from anywhere for testing and in production allow only the needed ip address only
+
+
+
+ CRUD
+
+ C => create
+ R => Read
+ U => Update
+ D => Delete
+
+ Add users in database access layer ( with different type of access)
+
+Download compass to see the data of clusters
