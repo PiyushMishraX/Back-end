@@ -37,9 +37,13 @@ app.get('/notes', async( req , res)=>{
 
     // const notes = await noteModel.find() // find returns all notes from db as an array of object // if no elements then empty array
 
-    const notes = await noteModel.findOne({
-        title: "test_title4"
-    }) // find that one // returns a single object // if not found return null 
+    // const notes = await noteModel.findOne({
+    //     title: "test_title4"
+    // }) // find that one // returns a single object // if not found return null 
+
+    const notes = await noteModel.find({
+        title: "test_title"
+    }) // find all eith title name test
 
     res.status(200).json({
         message:"Notes fetched successfully",
