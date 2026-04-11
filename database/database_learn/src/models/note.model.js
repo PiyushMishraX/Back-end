@@ -7,3 +7,21 @@ const noteSchema = new mongoose.Schema({
     // age:Number,
     // dob:Date,
 })
+
+
+const noteMOdel = mongoose.model("note", noteSchema)
+
+module.exports = noteModel
+
+/*
+
+if we want to perform any operationon note we have to create a model for it
+
+CRUD operations
+Create - POST
+Read - GET
+Update - PATCH
+Delete -DELETE
+
+by creating model we skip the part of creating code for these operations in raw format 
+*/
