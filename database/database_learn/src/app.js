@@ -26,10 +26,22 @@ app.post("/notes", async (req,res)=>{
         title:data.title,
         description: data.description
     })
+    // mongoose create id uniquely for each note 
 
     res.status(201).json({
         message: "Note created"
     })
+})
+
+app.get('/notes', async( req , res)=>{
+
+    // const notes = await noteModel.find() // find returns all notes from db as an array of object // if no elements then empty array
+
+    res.status(200).json({
+        message:"Notes fetched successfully",
+        Notes : notes
+    })
+
 })
 
 module.exports = app
