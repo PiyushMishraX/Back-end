@@ -41,14 +41,40 @@ app.get('/notes', async( req , res)=>{
     //     title: "test_title4"
     // }) // find that one // returns a single object // if not found return null 
 
-    const notes = await noteModel.find({
-        title: "test_title"
-    }) // find all eith title name test
+    // const notes = await noteModel.find({
+    //     title: "test_title"
+    // }) // find all eith title name test
+
+
+    /* 
+
+    find => [{},{}] or []
+    findOne => {} or null
+    */
+
+    const notes = await noteModel.find() 
 
     res.status(200).json({
         message:"Notes fetched successfully",
         Notes : notes
     })
+
+})
+
+app.delete("/notes/:id", async(req,res)=>{
+
+    const id = req.params.id // req when something is coming 
+
+    await noteModel.findOneAndDelete({
+        _id:id
+    })
+
+    res.status(200).json({
+        message:"Notes deleted successfully",
+    })
+
+
+
 
 })
 
