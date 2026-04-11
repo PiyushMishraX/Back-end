@@ -3,7 +3,7 @@ const connectDB = require("./src/db/db")
 
 
 const dns = require("dns")
-
+// change dns here instead of in pc 
 dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 connectDB();
