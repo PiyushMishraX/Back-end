@@ -70,12 +70,29 @@ app.delete("/notes/:id", async(req,res)=>{
     })
 
     res.status(200).json({
-        message:"Notes deleted successfully",
+        message:"Note deleted successfully",
     })
 
+})
 
 
+app.patch("/notes/:id", async(req,res)=>{
+
+    const id = req.params.id
+
+    const description = req.body.description
+
+    await noteModel.findOneAndUpdate(
+        {_id:id}, // obj 1 to tell in which note changes will occur
+        { description: description} // updation 
+    )
+
+    res.status(200).json({
+        message:"Note updated successfully",
+    })
 
 })
+
+
 
 module.exports = app
