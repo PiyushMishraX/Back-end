@@ -7,6 +7,19 @@ and we do not store image in our servver because it do not have ssds/secondary s
 
 image --> cloud storage provider --> url
 
+cloud storage providers -> imagekit, cludinary , aws S3
+
 we will use image kit
 
 Multer - we are sending file not text reading it for express is possible thorugh multer
+
+
+we use a cloud storage provider . or any service provider after seeing better services and better pricing ,
+we switch according to the change in them whoever provide them better is choosen and we switch to it
+to make sure the change/s would be smooth we create a services folder in which we add their connectin gcode and just change that part to a standarf code which we use
+
+
+image kit -
+npm install @imagekit/nodejs
+
+const ImageKit =  require("@imagelit/nodejs")

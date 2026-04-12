@@ -1,6 +1,6 @@
 const express = require('express');
 const multer = require('multer');
-
+const uploadFile = require("./services/storage.service")
 
 
 const app = express();
