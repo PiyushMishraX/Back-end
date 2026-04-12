@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import axios from "axios"
+import { useEffect } from 'react'
 
 const Feed = () => {
 
@@ -9,6 +11,20 @@ const Feed = () => {
             caption:"beautiful sky",
         }
     ])
+
+    useEffect(() => {
+      
+        axios.get("https://localhost:3000/posts")
+        .then((res)=>{
+            console.log(res.data);
+            
+        })
+
+
+    }, []) 
+    //The useEffect hook in React is primarily used to perform side effects in functional components, such as fetching data, subscribing to external events, or manually changing the DOM.
+    // use prevents the multiple times calling of api
+    
 
   return (
     <section className='feed-section'>
@@ -32,3 +48,9 @@ const Feed = () => {
 }
 
 export default Feed
+
+
+// call get /post api with react application to show all posts
+
+// install npm i axios
+
