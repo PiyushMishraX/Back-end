@@ -21,9 +21,11 @@
 
 const mongoose = require("mongoose");
 
+require('dotenv').config();
+
 async function connectDB() {
   await mongoose.connect(
-    "mongodb+srv://User_backend_learning_1:Bmo5QvOMDN6m7pM1@backend-learning.6enzpps.mongodb.net/hello",
+    process.env.MONGO_URI,
   );
 
   console.log("Connected with db");
@@ -32,3 +34,5 @@ async function connectDB() {
 // connectDB() // no
 
 module.exports = connectDB // export to server.js for finally connecting
+
+// npm install dotenv -> for env data loading
