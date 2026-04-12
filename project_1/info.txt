@@ -38,5 +38,15 @@ frontend ke baad integration ( any one can do but usually done by frontend devel
 
 
 
-what is CORS ( policy ) --->
-by deault browsers restrict webpages from making requests from a different origin // are frontend and backend are at different origin ( ports )
+what is CORS ( policy ) ( browser inbuilt security ) --->
+by deault browsers restrict webpages from making requests from a different origin // are frontend and backend are at different origin ( ports ) 
+// 5173 and 3000
+
+
+to prevent this -- add this in backend --
+npm i cors
+
+const cos = require("cors")
+
+middleware
+app.use(cors())

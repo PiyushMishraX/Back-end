@@ -14,7 +14,8 @@ const Feed = () => {
 
     useEffect(() => {
       
-        axios.get("https://localhost:3000/posts")
+        // axios.get("https://localhost:3000/posts")
+        axios.get("http://localhost:3000/posts")
         .then((res)=>{
             console.log(res.data);
             
