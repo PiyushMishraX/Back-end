@@ -1,0 +1,10 @@
+cloud sotrage provider -> give file and they return a url 
+we will store image in cloud storage provider and store link in database , the databases aren't made for saving files , dbs aren't designed for storing images
+
+and we do not store image in our servver because it do not have ssds/secondary storage
+
+( production server such as aws only have oa , cpu and ram )
+
+image --> cloud storage provider --> url
+
+we will use image kit
