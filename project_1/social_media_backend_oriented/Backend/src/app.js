@@ -15,6 +15,11 @@ app.post('/create-post', upload.single("image"), async (req,res)=>{
 
     console.log(req.body);
     console.log(req.file); // buffer is acutal file which we will upload in image kit
+
+    const result = await uploadFile(req.file.buffer)
+
+    console.log(result);
+    
     
 } )
 

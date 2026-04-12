@@ -1,4 +1,4 @@
-const ImageKit =  require("@imagelit/nodejs")
+const ImageKit =  require("@imagekit/nodejs")
 
 const imagekit = new ImageKit({
 
@@ -7,12 +7,12 @@ const imagekit = new ImageKit({
 
 async function uploadFile(buffer) {
 
-    const result = await imagekit.client.upload({
-        file: buffer,
+    const result = await imagekit.files.upload({ // our client is imagekit
+        file: buffer.toString("base64"),
         fileName: "image.jpg"
     })
 
     return result;
 }
 
-modue.exports = uploadFile
+module.exports = uploadFile
