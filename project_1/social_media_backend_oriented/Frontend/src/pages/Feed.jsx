@@ -15,10 +15,14 @@ const Feed = () => {
     useEffect(() => {
       
         // axios.get("https://localhost:3000/posts")
+        // is returns all created post
         axios.get("http://localhost:3000/posts")
         .then((res)=>{
             // console.log(res.data);
-            setPosts(res.data.posts)
+            setPosts(res.data.posts) // posts store array of object(posts)
+
+            // console.log(posts);
+            
             
         })
 
