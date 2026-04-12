@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 const Feed = () => {
 
-    const [posts, SetPosts] = useState([
+    const [posts, setPosts] = useState([
         {
             _id:"1",
             image: "https://images.unsplash.com/photo-1601297183305-6df142704ea2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2xlYXIlMjBza3l8ZW58MHx8MHx8fDA%3D",
@@ -17,7 +17,8 @@ const Feed = () => {
         // axios.get("https://localhost:3000/posts")
         axios.get("http://localhost:3000/posts")
         .then((res)=>{
-            console.log(res.data);
+            // console.log(res.data);
+            setPosts(res.data.posts)
             
         })
 
