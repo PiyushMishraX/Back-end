@@ -23,3 +23,11 @@ image kit -
 npm install @imagekit/nodejs
 
 const ImageKit =  require("@imagelit/nodejs")
+
+
+.env ->
+to use
+npm i dotenv ( with import statements it have different syntax for   )
+require("dotenv").config();
+
+
