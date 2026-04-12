@@ -1,5 +1,5 @@
 const express = require('express');
-const mutler = require('mutler');
+const multer = require('multer');
 
 
 
@@ -10,10 +10,11 @@ app.use(express.json()); // it created data redeable (log req.body --> undefined
 
 const upload = multer({Storage: multer.memoryStorage() })
 
-
-app.post('/create-post', async (req,res)=>{
+// upload.single("image") --> image --> same as key name we are sending
+app.post('/create-post', upload.single("image"), async (req,res)=>{
 
     console.log(req.body);
+    console.log(req.file); // buffer is acutal file which we will upload in image kit
     
 } )
 
