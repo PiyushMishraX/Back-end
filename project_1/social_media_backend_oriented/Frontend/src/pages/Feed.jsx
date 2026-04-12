@@ -19,6 +19,7 @@ const Feed = () => {
                     <div key={post._id}
                     className='post-card'>
                         <img src={post.image} alt={post.caption} />
+                        <p>{post.caption}</p>
                     </div>
                 ))
             ): (
