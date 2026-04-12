@@ -19,7 +19,7 @@ we switch according to the change in them whoever provide them better is choosen
 to make sure the change/s would be smooth we create a services folder in which we add their connectin gcode and just change that part to a standarf code which we use
 
 
-image kit -
+image kit - ( 5gb storage free )
 npm install @imagekit/nodejs
 
 const ImageKit =  require("@imagelit/nodejs")
