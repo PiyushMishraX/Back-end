@@ -8,3 +8,5 @@ and we do not store image in our servver because it do not have ssds/secondary s
 image --> cloud storage provider --> url
 
 we will use image kit
+
+Multer - we are sending file not text reading it for express is possible thorugh multer
