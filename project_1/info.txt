@@ -31,3 +31,8 @@ npm i dotenv ( with import statements it have different syntax for   )
 require("dotenv").config();
 
 
+
+Backend pehle fir frontend (and parallaly designed is done(ui)  )
+frontend ke baad integration ( any one can do but usually done by frontend developer , backend developer just gives documentation of what api does what work )
+
+
