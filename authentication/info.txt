@@ -41,6 +41,11 @@ at time of access user sends copy of  token with request and server reads the to
 
 it is authentication
 '
-with every request , uri weapens the cone
+with every request , uri checks the token
 
 require reuies witch
+
+
+the api aren't created in app.js 
+it is in src/routes/auth.routes.js
+and created are register api
