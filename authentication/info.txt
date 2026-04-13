@@ -58,3 +58,6 @@ when server is saving user information
 then it saves data then create token -
 token package-
 npm i jsonwebtoken ( require byt jwt name)
+
+toke is well calculated string jwt.sign() perform many mathematicla oprations with suer data and jwt_secret then we get the token
+these tokens are saved in in cookies 

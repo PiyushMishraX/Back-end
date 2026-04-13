@@ -1,5 +1,5 @@
 const userModel = require("../models/user.model");
-const jwt = require("josnwebtoken");
+const jwt = require("jsonwebtoken");
 
 
 async function registerUser(req, res) {
