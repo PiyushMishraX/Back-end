@@ -40,3 +40,7 @@ server saves user information at time of registraction and create a token contai
 at time of access user sends copy of  token with request and server reads the token then allow user the access
 
 it is authentication
+'
+with every request , uri weapens the cone
+
+require reuies witch
