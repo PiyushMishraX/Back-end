@@ -19,3 +19,8 @@ mobile => 767678787
 email => vijat@dev.com [ check if really email is of the user or not using email otp ]
 fullName => jester
 password => Test@123
+
+
+Authentication ( request is coming from which user , identifying that user is authentication )
+
+authorization ( a user can do what is authorization ( such what a normal user can do and what an admin can do they have different level of authorization ))
