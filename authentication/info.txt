@@ -49,3 +49,4 @@ require reuies witch
 the api aren't created in app.js 
 it is in src/routes/auth.routes.js
 and created are register api
+the logic isn't in routes it in controllers files
