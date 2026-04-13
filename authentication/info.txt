@@ -1,0 +1,21 @@
+an authentication system have these  4 things -
+
+Validation
+Verification
+authentication
+Authorization
+
+
+Validation (check wheter the data is in correct format or not )
+
+mobile => 767678787
+email =>24352435345 [email@a.com]
+fullName => jester
+password => Test@123
+
+Verification ( data is correct or not)
+
+mobile => 767678787
+email => vijat@dev.com [ check if really email is of the user or not using email otp ]
+fullName => jester
+password => Test@123
