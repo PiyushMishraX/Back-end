@@ -50,3 +50,11 @@ the api aren't created in app.js
 it is in src/routes/auth.routes.js
 and created are register api
 the logic isn't in routes it in controllers files
+
+auth routes -> in routes folder ( login , logout , forget password etc)
+post reloated routes -> in post routes folder 
+
+when server is saving user information
+then it saves data then create token -
+token package-
+npm i jsonwebtoken ( require byt jwt name)
