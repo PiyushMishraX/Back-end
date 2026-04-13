@@ -24,3 +24,19 @@ password => Test@123
 Authentication ( request is coming from which user , identifying that user is authentication )
 
 authorization ( a user can do what is authorization ( such what a normal user can do and what an admin can do they have different level of authorization ))
+
+These 4 are pillars of authentication system 
+
+they are of 2 types -
+1. SessionBased
+2. TokenBased
+
+we will use token based 
+
+
+
+server saves user information at time of registraction and create a token containing information of user and sends the token to user
+
+at time of access user sends copy of  token with request and server reads the token then allow user the access
+
+it is authentication
