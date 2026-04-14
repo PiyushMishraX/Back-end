@@ -11,5 +11,12 @@ async function registerUser(req, res) {
         username: username,
         email: email, 
         // problem here is that if a user have both or one , daa same as others and if both fields points points to differnt uers than the loading can not be done , usernameexists , eve  though the duplicate values exists 
+        // so we use $or[{}{}] operator which ca text multiple cases seperately 
+
+
+        $or:[
+            {username},
+            {email},
+        ]
     })
 }
