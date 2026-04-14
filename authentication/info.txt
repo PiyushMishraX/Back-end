@@ -61,3 +61,16 @@ npm i jsonwebtoken ( require byt jwt name)
 
 toke is well calculated string jwt.sign() perform many mathematicla oprations with suer data and jwt_secret then we get the token
 these tokens are saved in in cookies 
+
+
+
+Cookies storage 
+server can directly access the cookie storage data from browser, server can read it and change it, cookie storage admin access  is in hand of server
+
+anything stored in cookie will sure get sent to server for every request
+
+postman cookies section to test the server cookies handling
+
+to use cookies and edit them in express server we use another middleware
+
+npm i cookie-parser ( reuqire cookie-parser)
