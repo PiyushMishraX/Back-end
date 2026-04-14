@@ -10,7 +10,8 @@ app.use(cookieParser()) // cookie ka data padh sake
 
 
 
-app.use('/api/auth', authRoutes)
+// app.use('/api/auth' ,authRoutes)
+app.use("/api/auth" ,authRoutes)
 
 
 module.exports = app;
