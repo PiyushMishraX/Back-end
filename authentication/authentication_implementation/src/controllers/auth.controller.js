@@ -20,10 +20,13 @@ async function registerUser(req, res) {
 
     }, process.env.JWT_SECRET) 
 
+    // res.cookie("mama", token) // token named mama
+    res.cookie("token", token) // token named mama
+
     res.status(201).json({
         message: "User registered suucessfully",
         user,
-        token,
+        // token, // we store token in cookies not anywhere else , so user can access it
     })
 }
 
