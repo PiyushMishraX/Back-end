@@ -13,7 +13,7 @@ email =>24352435345 [email@a.com]
 fullName => jester
 password => Test@123
 
-Verification ( data is correct or not)
+Verification ( data is correct or not) ( regex )
 
 mobile => 767678787
 email => vijat@dev.com [ check if really email is of the user or not using email otp ]

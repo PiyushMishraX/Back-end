@@ -36,7 +36,7 @@ async function registerUser(req, res) {
     
      const {username, email, password} = req.body;
 
-     // we do not send the error of non- unique creation(etc) directly in frontend it is risky , we take other steps to inform user
+     // we do not send the error of non- unique creation(etc) directly in frontend it is risky , we take other steps to inform user ( also below is a level up on register api)
      const isUserAlreadyExists = await userModel.findOne({
         email
      })

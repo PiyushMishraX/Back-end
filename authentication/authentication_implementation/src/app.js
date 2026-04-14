@@ -1,5 +1,6 @@
 const express = require("express");
 const authRoutes = require("./routes/auth.routes");
+const postRoutes = require("./routes/post.routes");
 const cookieParser = require("cookie-parser");
 
 const app = express();
@@ -7,5 +8,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes); // have to use prefix -> /api/auth to ask api created with router
+// for a router use /api/name_given ( name is generally the name similar to ---.routes files ---)
+
+app.use("/api/posts", postRoutes) // we will allow user only when he is logged in  // when user have token, it is real and correct
 
 module.exports = app;
