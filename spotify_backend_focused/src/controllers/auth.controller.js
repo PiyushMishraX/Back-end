@@ -1,12 +1,13 @@
 const userModel = require('../models/user.mdoel');
+const jwt = require("jsonwebtoken")
 
 
 async function registerUser(req, res) {
 
-    const {username, email , password , role="user" } = req.body;
+    const {username, email , password , role="user" } = req.body; // bydefault role == user
 
     
-    const idUserAlreadyExists = await userModel.findOne({
+    const isUserAlreadyExists = await userModel.findOne({
 
         username: username,
         email: email, 
@@ -19,4 +20,31 @@ async function registerUser(req, res) {
             {email},
         ]
     })
+
+
+    if(isUserAlreadyExists){
+        return res.status(409)({
+            message: "User already exists",
+        })
+    }
+
+    const token = jwt.sign({
+        id: user._id, // any one unique data is enough but we will use role too , for use case
+        role: user.role,
+    }, process.env.JWT_SECRET)
+
+    res.cookie("token", token)
+
+    res.status(201).json({
+        message:"User registered successfully",
+        // user,//not the password showing in screen
+        user:{
+            id: user._id,
+            username: user.username,
+            email: user.email,
+            role: user.role
+        }
+    })
 }
+
+mou
