@@ -22,7 +22,12 @@ router.post("/create", (req,res)=>{
 
     
     try{
-        jwt.verify(token, process.env.JWT_SECRET) // if server do not have created that token than jwt.verify throws an error and if error is catched than catch block handles it
+        // jwt.verify(token, process.env.JWT_SECRET) // if server do not have created that token than jwt.verify throws an error and if error is catched than catch block handles it
+
+        // if the token is real( correct ) than jwt.verify do not return an error nut returns the object which we encoded in token ( here the _id)
+        const decoded = jwt.verify(token, process.env.JWT_SECRET) 
+        console.log(decoded); // { _id , iat //token cration timing }
+        
         
     }catch(err){
         return res.status(401).json({
