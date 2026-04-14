@@ -3,3 +3,11 @@ all users can listen the music
 only artist users can upload music
 
 npm i express mongoose jsonwebtoken cookie-parser dotenv
+
+
+modify npx nodemon server.js
+in package.json -> scripts add "dev": "npx nodemon server.js" 
+now, npm run dev, will run it  npx nodemon serverr.js
+
+add ( used in production to deploy/ start server) ( added changes do not effect user ) ( when changes completed stop it and run again)
+"start":"node server.js"
