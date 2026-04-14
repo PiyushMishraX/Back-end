@@ -11,3 +11,12 @@ now, npm run dev, will run it  npx nodemon serverr.js
 
 add ( used in production to deploy/ start server) ( added changes do not effect user ) ( when changes completed stop it and run again)
 "start":"node server.js"
+
+password hashing -- if database get hacked the hackers will only get hashed password not the original, redeable password
+( see mdHashgenerator) ( hashing is an algorithnm , cyptography algorithm)
+
+test --> hashing --> f57ffe8fdd526f24a39b69b0ae053ff0
+
+properties -> 
+1. same inut same output evertime
+2. hash cannot be converted to plain text after hashing ( for the real security , we store hash when user inputs password it matches with the hash)
