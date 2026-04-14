@@ -15,7 +15,7 @@ router.get("/test", (req, res)=>{
         message: "Test route",
         cookies: req.cookies
     })
-    
+    // now after seeing the token server can take actions on user datas , which is found through token ( which secure than using guessable ids generated from mongo db)
 })
 
 module.exports = router;
