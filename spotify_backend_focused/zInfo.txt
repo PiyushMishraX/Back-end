@@ -20,3 +20,7 @@ test --> hashing --> f57ffe8fdd526f24a39b69b0ae053ff0
 properties -> 
 1. same inut same output evertime
 2. hash cannot be converted to plain text after hashing ( for the real security , we store hash when user inputs password it matches with the hash)
+( so even when database breatched , leaked or compromised then the attacker only gets the hash , and the hash cannot be converted back to plain text  )
+
+performing hashing -
+package ( npm i bcryptjs )

@@ -1,6 +1,6 @@
 const userModel = require('../models/user.mdoel');
-const jwt = require("jsonwebtoken")
-
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 async function registerUser(req, res) {
 
@@ -28,6 +28,8 @@ async function registerUser(req, res) {
         })
     }
 
+    const hash = await bcrypt.hash(password,10)
+
     const token = jwt.sign({
         id: user._id, // any one unique data is enough but we will use role too , for use case
         role: user.role,
@@ -47,4 +49,3 @@ async function registerUser(req, res) {
     })
 }
 
-mou
