@@ -1,0 +1,5 @@
+roll Based authorization -
+all users can listen the music
+only artist users can upload music
+
+npm i express mongoose jsonwebtoken cookie-parser dotenv
