@@ -86,7 +86,28 @@ async function loginUser(req,res) {
     // convert to hash than check
     const isPasswordValid = bcrypt.compare(password, user.password)
 
-    
+    if(!isPasswordValid){
+        return res.status(401).json({message: "Invalid credentials"})
+    }
+
+    // runs when everything calid // create token for login
+    const token = JsonWebTokenError.sign({
+        id: user._id,
+        role: user.role,
+    }, process.env.JWT_SECRET)
+
+    res.cookie("token", token)
+
+    res.status(200).json({
+        message:"User logged in successfully",
+        user:{
+            id: user._id,
+            username: user.username,
+            email: user.email,
+            role: user.role
+        }
+    })
+
 }
 
 module.exports = {registerUser}; // export as object so if any other functions are made they can be exported too and used from one require statement
