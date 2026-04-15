@@ -1,5 +1,8 @@
 const musicModel = require("../models/music.model")
+const {uploadFile} = require("../services/storage.service")
 const jwt = require("jsonwebtoken")
+
+
 
 
 async function createMusic(req,res){
@@ -21,6 +24,10 @@ async function createMusic(req,res){
     } catch (err) {
         return res.status(401).json({message: "Unathorized"})
     }
+
+
+    const {title} =  req.body;
+
 
 
 
