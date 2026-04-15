@@ -12,7 +12,7 @@ async function registerUser(req, res) {
         // username: username,
         // email: email, 
         // // problem here is that if a user have both or one , daa same as others and if both fields points points to differnt uers than the loading can not be done , usernameexists , eve  though the duplicate values exists 
-        // so we use $or[{}{}] operator which ca text multiple cases seperately 
+        // so we use $or[{}{}] operator which can text multiple cases seperately 
 
 
         $or:[
@@ -57,5 +57,33 @@ async function registerUser(req, res) {
     })
 }
 
+
+
+
+// //  /login
+// req.body ={
+//     username:a,
+//     email:undefined,
+//     password:test
+// } // we will handle undefined user $or if any one condition satisfies than it is good
+
+async function loginUser(req,res) {
+     
+    // login qith username or email and password one of the data field coming will be empty
+    const {username, email, password} = req.body;
+
+    const user = await userModel.findOne({
+        $or:[
+            { username },
+            { email }
+        ]
+    })
+
+    if(!user){
+        return res.status(401).json({message: "invalid credentials"})
+    }
+
+    
+}
 
 module.exports = {registerUser}; // export as object so if any other functions are made they can be exported too and used from one require statement
