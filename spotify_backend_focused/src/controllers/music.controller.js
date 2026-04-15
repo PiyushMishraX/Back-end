@@ -27,8 +27,26 @@ async function createMusic(req,res){
 
 
     const {title} =  req.body;
+    const file = req.file;
 
+    const result = await uploadFile(file.buffer.toString('base64'))
+ 
+    const music = await musicModel.create({
+        uri: result.uti,
+        title,
+        title,
+        artist: decoded.id
 
+    })
+    res.status(201).json({
+        message: "Music createdd successfully",
+        music:{
+            id: music._id,
+            uri: music.url,
+            title: music.title,
+            artist: music.artist
+,        }
+    })
 
 
 }
