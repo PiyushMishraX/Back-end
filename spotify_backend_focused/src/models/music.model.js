@@ -1,0 +1,24 @@
+const mongoose = require('mongoose');
+
+
+const musicSchema = new mongoose.Schema({
+    uri:{
+        type:String,
+        required:true,
+    },
+    title:{
+        type:String,
+        required:true,
+    },
+    artist:{
+        // id of artist
+        type: mongoose.Schema.Types.ObjectId, 
+        ref:"user",
+        required: true,
+    }
+})
+
+const musicModel = mongoose.mmodel("music", musicSchema );
+
+
+module.exports = musicModel;
