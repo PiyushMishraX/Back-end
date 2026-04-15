@@ -83,6 +83,9 @@ async function loginUser(req,res) {
         return res.status(401).json({message: "invalid credentials"})
     }
 
+    // convert to hash than check
+    const isPasswordValid = bcrypt.compare(password, user.password)
+
     
 }
 
