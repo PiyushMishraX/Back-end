@@ -75,7 +75,7 @@ async function loginUser(req,res) {
     const user = await userModel.findOne({
         $or:[
             { username },
-            { email }
+            { email },
         ]
     })
 
@@ -91,7 +91,7 @@ async function loginUser(req,res) {
     }
 
     // runs when everything calid // create token for login
-    const token = JsonWebTokenError.sign({
+    const token = jwt.sign({
         id: user._id,
         role: user.role,
     }, process.env.JWT_SECRET)
@@ -110,4 +110,4 @@ async function loginUser(req,res) {
 
 }
 
-module.exports = {registerUser}; // export as object so if any other functions are made they can be exported too and used from one require statement
+module.exports = {registerUser, loginUser}; // export as object so if any other functions are made they can be exported too and used from one require statement
