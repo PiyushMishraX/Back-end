@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const albumSchema = new mongoose.Schema({
     title: {
-        String,
+        type: String,
         required: true,
     },
     musics: [{
