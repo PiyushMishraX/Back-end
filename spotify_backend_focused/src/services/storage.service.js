@@ -1,14 +1,14 @@
-const { imageKit} = require("@imagekit/nodejs")
+const { ImageKit} = require("@imagekit/nodejs")
 
 //  image kit install - npm install @imagekit/nodejs
 
-const ImageKitCLient = new ImageKit({
+const ImageKitClient = new ImageKit({
     privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
 })
 
 
-async function uploadFile() {
-    const result = await ImageKitCLient.files.upload({
+async function uploadFile(file) {
+    const result = await ImageKitClient.files.upload({
         file,
         fileName:"music_" + Date.now(),
         folder: "spotify_project_backend/music"
