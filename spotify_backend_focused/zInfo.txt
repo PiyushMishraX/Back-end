@@ -24,3 +24,6 @@ properties ->
 
 performing hashing -
 package ( npm i bcryptjs )
+
+
+in this project we have role based authentication
