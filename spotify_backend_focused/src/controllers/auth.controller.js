@@ -30,7 +30,7 @@ async function registerUser(req, res) {
     }
 
     const hash = await bcrypt.hash(password,10) //asynchronus process ( need some time ) so use await  
-    // 10 -> slat -> add unique , random value to each passowrd before hashing // securing the password for 100's of 1000's of years for brute force methods etc
+    // 10 -> salt -> add unique , random value to each passowrd before hashing // securing the password for 100's of 1000's of years for brute force methods etc
 
     const user = await userModel.create({
         username,
