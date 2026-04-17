@@ -173,14 +173,15 @@ async function getAllMusics(req, res) {
 
 async function getAllAlbums(req, res) {
 
-    const albums = await albumModel.find().populate("artist", "username email").populate("musics")
-
+    // const albums = await albumModel.find().populate("artist", "username email").populate("musics")
+    const albums = await albumModel.find().select("title artist").populate("artist", "username email") // no music loading at once
     res.status(200).json({
         message: "Message fetched suucessfully",
         albums: albums
     })
     
 }
+// optimize to not load all at once 
 
 
 
