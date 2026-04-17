@@ -44,7 +44,8 @@ async function authUser(req, res , next) {
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
-            if(decoded.role !== "user" && decode.role.user !== artsit){
+            // if(decoded.role !== "user" && decoded.role !== "artist"){
+            if(decoded.role !== "user" ){ // user profiles can access the musics // for learning role based authentication use this line
                 return res.status(403).json({message: "You don't have access"})
             }
 
@@ -62,7 +63,9 @@ async function authUser(req, res , next) {
 
 }
 
-module.exports = {authArtist};
+
+module.exports = {authArtist, authUser};
+
 
 //  use of next
 // router.post("/upload", authMiddleware.authArtist, upload.single("music"),musicController.createMusic)
