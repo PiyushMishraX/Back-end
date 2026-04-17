@@ -157,7 +157,18 @@ async function createAlbum(req,res){
 
 }
 
-module.exports = { createMusic, createAlbum };
+
+async function getAllMusics(req, res) {
+
+    const musics = await musicModel.find()
+
+    res.send(200).json({
+
+    })
+    
+}
+
+module.exports = { createMusic, createAlbum, getAllMusics };
 
 
 
