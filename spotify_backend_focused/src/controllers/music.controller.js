@@ -160,10 +160,13 @@ async function createAlbum(req,res){
 
 async function getAllMusics(req, res) {
 
-    const musics = await musicModel.find()
+    // const musics = await musicModel.find()
+    // const musics = await musicModel.find().populate("artist") // give details of artist too
+    const musics = await musicModel.find().populate("artist","username email") // only username and email of artist
 
-    res.send(200).json({
-
+    res.status(200).json({
+        message: "Musics fetched successflly",
+        musics: musics,
     })
     
 }
