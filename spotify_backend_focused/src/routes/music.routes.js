@@ -14,6 +14,8 @@ const upload = multer({
 const router = express.Router();
 
 
+// POST /api/music/upload -> request goes to server instance in app.js then the inital /api/music is matched and that file is started then-> /upload is matched
+// in it first the middleware runs than multer than controller
 
 router.post("/upload", authMiddleware.authArtist, upload.single("music"),musicController.createMusic)
 

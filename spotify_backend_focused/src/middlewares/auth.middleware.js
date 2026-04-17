@@ -29,3 +29,9 @@ async function authArtist(req, res , next){
 }
 
 module.exports = {authArtist};
+
+//  use of next
+// router.post("/upload", authMiddleware.authArtist, upload.single("music"),musicController.createMusic)
+
+// our file middlewar but fo not go to multer part to move are process to it we need to use next()
+// else the request will not move out from middleware
