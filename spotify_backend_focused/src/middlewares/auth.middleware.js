@@ -16,6 +16,11 @@ async function authArtist(req, res , next){
                 return res.status(403).json({message: "You don't have access to create an music"})
             }
 
+
+            // req.user is our custon property we are creating
+
+            req.user = decoded; // for artist in music conroller // we can access the  ser in or controller
+
             next()
           
         } catch (err) {

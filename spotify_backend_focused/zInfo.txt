@@ -26,4 +26,10 @@ performing hashing -
 package ( npm i bcryptjs )
 
 
-in this project we have role based authentication
+in this project we have role based authenticati
+
+power of middleware----
+request ke adnadar jo bhi data aata hai middleware sab read kr sakta hai , 
+use modify bhi kar sakte hai
+
+middleware response bhi send kar sakte hai
