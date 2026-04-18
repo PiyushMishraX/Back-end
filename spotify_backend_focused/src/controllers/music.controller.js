@@ -162,7 +162,16 @@ async function getAllMusics(req, res) {
 
     // const musics = await musicModel.find()
     // const musics = await musicModel.find().populate("artist") // give details of artist too
-    const musics = await musicModel.find().populate("artist","username email") // only username and email of artist
+
+    // const musics = await musicModel.find().populate("artist","username email") // only username and email of artist
+
+
+    // saving clients data (limit)
+    const musics = await musicModel
+        .find()
+        // .limit(20) // max 20 musics at once
+        .limit(2) // max 20 musics at once
+        .populate("artist","username email") 
 
     res.status(200).json({
         message: "Musics fetched successflly",
@@ -187,7 +196,7 @@ async function getAlbumById(req, res) {
 
     const albumId = req.params.albumId
 
-    const album = await albumModel.findById().populate("artist", "username email").populate("music")
+    const album = await albumModel.findById(albumId).populate("artist", "username email").populate("musics")
 
     return res.status(200).json({
         message: "Album fetched successfully",
