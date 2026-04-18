@@ -7,6 +7,8 @@
 // we go for specifics
 const { body, validationResult } = require('express-validator');
 
+// validation result with success or errors 
+
 // middleware
 async function validateResult(req, res, next) {
 
@@ -40,3 +42,7 @@ const registerUserValidationRUles = [
 
     validateResult // run when anything any rule fails / runs everytime and returns when req have any error generated above
 ]
+
+module.exports = {
+    registerUserValidationRUles
+}
