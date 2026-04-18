@@ -1,4 +1,4 @@
-const request = require('express')
+const request = require('supertest')
 const app = require('../app')
 
 describe("GET /", ()=>{ // write api to test and testcases in callback
