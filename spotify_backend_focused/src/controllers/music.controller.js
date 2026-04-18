@@ -167,10 +167,17 @@ async function getAllMusics(req, res) {
 
 
     // saving clients data (limit)
+    // const musics = await musicModel
+    //     .find()
+    //     // .limit(20) // max 20 musics at once ( if have lower than this than that number of musics will be fetched)
+    //     .limit(2) 
+    //     .populate("artist","username email") 
+
+    // skip
     const musics = await musicModel
         .find()
-        // .limit(20) // max 20 musics at once
-        .limit(2) // max 20 musics at once
+        .skip(2) // skips first first 2
+        .limit(1) 
         .populate("artist","username email") 
 
     res.status(200).json({
