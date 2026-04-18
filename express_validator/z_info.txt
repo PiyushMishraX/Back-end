@@ -1,3 +1,5 @@
 express validator ( validate username email  password etc)
 
 npm i express-validator
+
+this is how we use express validator to texr the data coming from frontend

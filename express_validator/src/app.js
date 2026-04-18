@@ -26,3 +26,11 @@ module.exports = app;
 //     "email": "test",
 //     "password": "test"
 // }
+
+
+// valid data
+// {
+//     "username": "test",
+//     "email": "test@test.com",
+//     "password": "test1234"
+// }
