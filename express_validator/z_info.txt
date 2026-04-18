@@ -1,0 +1,3 @@
+express validator ( validate username email  password etc)
+
+npm i express-validator
