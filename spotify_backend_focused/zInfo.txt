@@ -33,3 +33,12 @@ request ke adnadar jo bhi data aata hai middleware sab read kr sakta hai ,
 use modify bhi kar sakte hai
 
 middleware response bhi send kar sakte hai
+
+
+
+this project have production level folder structure
+
+
+we can optimize it with redis middleware
+
+( add frontend in this project, can add token black listing )
