@@ -173,12 +173,15 @@ async function getAllMusics(req, res) {
     //     .limit(2) 
     //     .populate("artist","username email") 
 
+
     // skip
     const musics = await musicModel
         .find()
-        .skip(2) // skips first first 2
+        // .skip(2) // skips first first 2
+        // .skip(0)
         .limit(1) 
         .populate("artist","username email") 
+    //  skip and limit are used in pagination to improve purformance
 
     res.status(200).json({
         message: "Musics fetched successflly",

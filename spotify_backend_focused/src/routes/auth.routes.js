@@ -10,5 +10,7 @@ router.post('/register', authController.registerUser ) // not ./register but /re
 
 router.post('/login', authController.loginUser)
 
+router.post('/logout', authController.logoutUser)
+
 
 module.exports = router;

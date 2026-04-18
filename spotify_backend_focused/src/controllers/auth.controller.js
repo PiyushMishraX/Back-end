@@ -111,4 +111,12 @@ async function loginUser(req,res) {
 
 }
 
-module.exports = {registerUser, loginUser}; // export as object so if any other functions are made they can be exported too and used from one require statement
+
+async function logoutUser(req,res) {
+
+    res.clearCookie("token")
+    res.status(200).json({message: "User logged out successfully"})
+    
+}
+
+module.exports = {registerUser, loginUser, logoutUser }; // export as object so if any other functions are made they can be exported too and used from one require statement
