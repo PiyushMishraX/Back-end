@@ -1,2 +1,12 @@
 1. Testing with jest and supertest
 2. Exress Validator ( API validator )
+
+jest ( package) -
+used to test anything created with js ,
+whether it be from react or express sever
+
+we need an other package to test express server , supertest
+
+npm i jest supertest
+
+jest used to test whether are api is sending fproper responsed or not
